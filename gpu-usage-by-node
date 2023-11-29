@@ -59,8 +59,3 @@ fi
 for node in ${node_list}; do
   echo "${dt},${node},`${this_dir}/gpu-usage -h -n $node`"
 done
-#for node in ${node_list}; do
-    #gpu_info=$(${this_dir}/gpu-usage -h -n $node)
-    #gpu_types=$(ssh $node nvidia-smi --query-gpu=gpu_name --format=csv,noheader | sort | uniq -c | awk '{print $2 ": " $1}')
-    #echo "${dt},${node},${gpu_info},${gpu_types}"
-#done
